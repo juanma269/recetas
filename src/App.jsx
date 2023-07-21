@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/login/Login";
 import Layout from "./layout/Layout";
+import RecipeList from "./pages/recipe/list/RecipeList";
 
 function App() {
   return (
@@ -8,11 +9,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />}></Route>
         <Route element={<Layout />}>
-          <Route
-            key="test"
-            path="/"
-            element={<h1>hola mundo y chau</h1>}
-          ></Route>
+          <Route path="/" element={<RecipeList />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
